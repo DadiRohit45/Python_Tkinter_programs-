@@ -117,6 +117,9 @@ An interactive educational desktop application built with **Python and Tkinter**
 │                                         │
 │            [🔄 Reset]                   │  ← reset button
 └─────────────────────────────────────────┘
+```
+
+
 ---
 
 ## 📄 License
