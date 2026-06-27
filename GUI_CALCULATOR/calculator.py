@@ -4,15 +4,15 @@ t.title("calculator")
 E1=Entry(t,bg="black",fg="white",width=22,font=("Arial",17),bd=12)
 E1.grid(row=0,column=0,columnspan=4)
 expression=""
-#result_shown=False    
+result_shown=False    
 def calculation():
-    global expression#,result_shown
+    global expression,result_shown
     try:
         result=str(eval(expression))
         E1.delete(0,END)
         E1.insert(0,result)
         expression=result
-        #result_shown=True
+        result_shown=True
     except:
         E1.delete(0,END)
         E1.insert(0,'ERROR')
@@ -20,10 +20,10 @@ def calculation():
 
 def click(a):
     global expression,result_shown
-    #if result_shown==True:
-        #E1.delete(0,END)
-        #E1.insert(0,'ans')
-        #sresult_shown=False
+    if result_shown==True:
+        E1.delete(0,END)
+        E1.insert(0,'ans')
+        result_shown=False
     expression+=str(a)
     E1.insert(END,a)
     
@@ -31,7 +31,7 @@ def clear():
     global expression,result_shown
     expression=""
     E1.delete(0,END)
-    #result_shown=False
+    result_shown=False
     
 def remove():
     global expression
